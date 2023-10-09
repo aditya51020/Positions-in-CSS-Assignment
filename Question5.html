@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question5</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+           padding: 10px;
+           margin: 10px;
+           position: relative;
+        }
+    
+        .boxes {
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            margin: 10px;
+            
+        }
+        .box {
+            padding: 10px;
+            margin: 10px;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            border: 2px solid black;
+        }
+
+        .box1 {
+            background-color: red;
+            color: #fff;
+            left: 50px;
+            top: 50px;
+            z-index: 1; /* Higher z-index */
+        }
+
+        .box2 {
+            background-color: blue;
+            color: #fff;
+            left: 80px;
+            top: 80px;
+            z-index: 2; /* Lower z-index */
+        }
+
+        .box3 {
+            background-color: green;
+            color: #fff;
+            text-align:end;
+            left: 110px;
+            top: 110px;
+            z-index: 1; /* Same z-index as box1 */
+        }
+        .line2{
+            padding: 10px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <p class="line">z-index is a CSS property that controls the stacking order of positioned elements along the z-axis (perpendicular to the screen). 
+    It determines which elements appear in front of or behind others when they overlap in the same stacking context. Elements with higher z-index values are displayed in front of elements with lower values.</p>
+    <div class="boxes">
+    <div class="box box1">box1</div>
+    <div class="box box2">box2</div>
+    <div class="box box3">box3</div>
+    </div>
+    </div>
+    <p class="line2">box1 is given a red background and a z-index of 1.
+        box2 is given a blue background and a higher z-index of 2.
+        box3 is given a green background and the same z-index as box1.
+        Since box2 has the highest z-index, it will appear on top of both box1 and box3. Between box1 and box3, box1 will be displayed on top because it appears earlier in the HTML document.</p>
+</body>
+</html>
